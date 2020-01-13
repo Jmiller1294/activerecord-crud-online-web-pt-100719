@@ -36,17 +36,14 @@ end
 
 def can_get_the_first_item_in_the_database
    movie = Movie.first
-   movie
 end
 
 def can_get_the_last_item_in_the_database
-  movie = Movie.last
-  movie
+  movie = Movie.last 
 end
 
 def can_get_size_of_the_database
-  movie = Movie.all
-  movie.size
+  movie = Movie.all.size
 end
 
 def can_find_the_first_item_from_the_database_using_id
@@ -68,7 +65,6 @@ def can_find_using_where_clause_and_be_sorted
   # For this test return all movies released after 2002 and ordered by 
   # release date descending
   movie = Movie.where("release_date > 2002").order("release_date desc")
-  
 end
 
 def can_be_found_updated_and_saved
@@ -77,7 +73,6 @@ def can_be_found_updated_and_saved
   movie = Movie.find_by(title: "Awesome Flick")
   movie.update(title: "Even Awesomer Flick")
   movie.save
-
 end
 
 def can_update_using_update_method
